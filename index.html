@@ -7,6 +7,7 @@ layout: default
   <h1 class="post-title-home">
     <a href="{{ post.url }}">{{ post.title }}</a>
   </h1>
+<<<<<<< HEAD
   <div class="post-meta-home">
     {% if post.author %}
       <span class="post-author">By {{ post.author }}</span>
@@ -17,6 +18,16 @@ layout: default
     {% endif %}
     {% include post-header-home.html %}
   </div>
+=======
+  <div class="post-author-home">
+    {% if post.author %}
+      By {{ post.author }}
+    {% else %}
+      By Anonymous
+    {% endif %}
+  </div>
+  {% include post-header-home.html %}
+>>>>>>> pr-2-Dewin2309-site
 </div>
 <div class="post-excerpt-home">
   {% assign excerpt_content = post.content | replace: '_By Al Morris_', '' | replace: 'By Al Morris', '' | replace: '*By Al Morris*', '' | strip_html | truncatewords: 50 %}
